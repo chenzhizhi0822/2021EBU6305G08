@@ -6,6 +6,6 @@
 
 ## Members:
 
-Kunyuan Ding, 20192131 , ,
-Yuxuan He, 2019213137, ,
+Kunyuan Ding, 2019213119, 190897572, (dingkunyuan1@foxmail.com)
+Yuxuan He, 2019213137, 190897882,
 Yukun Zhang, 
