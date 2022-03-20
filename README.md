@@ -2,7 +2,7 @@
 
 ## Group Number: 2022EBU6305Group8
 
-## Project Title:xxxxxxxxxx
+## Project Title: A storytelling website about the third industrial revolution
 
 ## Members:
 
