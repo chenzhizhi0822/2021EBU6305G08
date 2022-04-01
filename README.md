@@ -1,6 +1,6 @@
 # BUPT-QM-2022-EBU6305-Group8
 
-## Group Number: 2022EBU6305G08
+## Group Name: 2021EBU6305G08
 
 ## Project Title: A storytelling website about the third industrial revolution
 
