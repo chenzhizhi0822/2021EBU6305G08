@@ -14,6 +14,11 @@
 
 ## Assigned TA: Yiming Zhou
 
+### Requirtments
+<img width="846" alt="截屏2022-04-15 19 57 38" src="https://user-images.githubusercontent.com/58174623/163568154-4193e0bd-8fc6-44c5-8ab5-2d599c5ec3ab.png">
+<img width="845" alt="截屏2022-04-15 19 57 48" src="https://user-images.githubusercontent.com/58174623/163568163-70e86536-0cc3-4c17-9093-fbae5a5915b7.png">
+
+
 ### Quick look of our pages
 - Version1
 
