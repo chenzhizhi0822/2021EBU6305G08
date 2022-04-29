@@ -10,7 +10,22 @@
 	
 
     <style>
-
+ .xm{
+          position:fixed;
+          bottom:0;
+          left:0;
+          z-index:1;
+          font-size:0;
+          transition:all .3s ease-in-out;          
+          transform:translateY(5px);          
+      }
+      .xm:hover{
+          -webkit-transform:translateY(0);
+          -ms-transform:translateY(0);
+      }
+      .xm img{
+          width:50px;
+      }
 @media screen and (max-width: 320px) {
 #map_base svg {
 	height: 100px;
@@ -101,9 +116,12 @@
 	    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+	<div class="xm">
+		<img src="images/BUPT.jpeg" />
+	</div>
     <div class="container-fluid p-0">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a class="navbar-brand mb-0 h1" href="./mainpage.html"><img style="width: 40px; height: 40px;" src="images/Logo.png" class="boader rounded-circle border-dark"></img></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -157,33 +175,33 @@
 	<div class="container textCenter text-center container1 pb-2">
 		<div class="row">
 		<div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
+			<div class="card mb-3 mt-3 shadow p-3 mb-5 bg-white rounded" style="width: 540px;">
 				<div class="row no-gutters">
 				  <div class="col-md-12">
 					<img src="./images/region.jpg" class="img-fluid" style="width: 100%;" alt="...">
 				  </div>
 				  <hr class="line">
 				  <div class="col-md-12">
-					<div class="card-body">
+
 					  <h5 class="card-title">Region</h5>
 					  <a href="#region" class="btn btn-primary">Go region</a>
-					</div>
+
 				  </div>
 				</div>
 			</div>
 		</div>
 		<div class="col">
-		  <div class="card mb-3 mt-3" style="max-width: 540px;">
+		  <div class="card mb-3 mt-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 540px;">
 			<div class="row no-gutters">
 			  <div class="col-md-12">
 				<img src="./images/education.jpg" class="img-fluid" style="width: 100%;" alt="...">
 			  </div>
 			  <hr class="line">
 			  <div class="col-md-12">
-				<div class="card-body">
+
 				  <h5 class="card-title">Education</h5>
 				  <a href="#education" class="btn btn-primary">Go education</a>
-				</div>
+
 			  </div>
 			</div>
 		</div>
@@ -191,33 +209,33 @@
 		</div>
 		<div class="row">
 		  <div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
+			<div class="card mb-3 mt-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 540px;">
 			  <div class="row no-gutters">
 				<div class="col-md-12">
 				  <img src="./images/time.jpg" class="img-fluid" style="width: 100%;" alt="...">
 				</div>
-				<hr class="line">
+				<hr class="line"style:width=100%>
 				<div class="col-md-12">
-				  <div class="card-body">
+
 					<h5 class="card-title">Time</h5>
 					<a href="#time" class="btn btn-primary">Go time</a>
-				  </div>
+
 				</div>
 			  </div>
 		  </div>
 		  </div>
 		  <div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
+			<div class="card mb-3 mt-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 540px;">
 			  <div class="row no-gutters">
 				<div class="col-md-12">
 				  <img src="./images/industry.jpg" class="img-fluid" style="width: 100%;" alt="...">
 				</div>
 				<hr class="line">
 				<div class="col-md-12">
-				  <div class="card-body">
+
 					<h5 class="card-title">Industry</h5>
 					<a href="#industry" class="btn btn-primary">Go industry</a>
-				  </div>
+
 				</div>
 			  </div>
 		  </div>
