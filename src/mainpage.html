@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Montserrat:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/redraw.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Third Technology Revolution</title>
     <style>
-        img:hover {
-          
-          transform: scale(1.2);
+
+        /*导航悬浮效果*/
+        nav div li:hover {
+          background-color: rgb(193, 193, 193);
         }
+        nav div li:hover a{
+          color: black;
+        }
+        dropdown-menu {
+            display: none;
+            position: absolute;  
+            background-color: #f9f9f9;  
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }  
+        .dropdown-menu a:hover {  
+            background-color: #f1f1f1  
+        }  
+        .dropdown:hover .dropdown-menu {  
+            display: block;  
+        } 
+
         .container-fluid {
             padding: 0px;
         }
@@ -32,7 +57,7 @@
             height: 200px;
         }
         .txtCenter{text-align:center;}
-        .container1 {
+        .container1 { 
             background-color: rgba(0, 110, 254, 0.096);
         }
         .col:hover .card{
@@ -40,42 +65,73 @@
           max-height: 120%;
         }
         .bg-color-content {
-          background-color: #e9ecef;
+          background-color: #2b3f53;
+        }
+        .footer:hover img {
+            transform: scale(1.2);
+            transition: 0.5s;
+          }
+        .bg-content {
+          background-image: linear-gradient(to bottom, rgb(71, 71, 73),80%, rgb(129, 126, 126));
+        }
+        .bg-gradient {
+          background-image: linear-gradient(to right, rgb(85, 85, 87),80%, rgb(150, 147, 147));
+        }
+        .bg-footer {
+          background-image: linear-gradient(to top, rgb(85, 85, 87),80%, rgb(150, 147, 147));
+        }
+        .xm{
+          position:fixed;
+          bottom:0;
+          right:0;
+          z-index:1;
+          font-size:0;
+          transition:all .3s ease-in-out;          
+          transform:translateY(0px);          
+        }
+        .xm:hover{
+          -webkit-transform:translateY(-5);
+          -ms-transform:translateY(-5);
+        }
+        .xm img{
+          width:50px;
         }
     </style>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+    <div class="xm rounded-circle" id="xm">
+      <a href="#top"><img src="images/BUPT.jpeg" class="boader rounded-circle border-dark"/></a>
+    </div>
+    <!-- Beagin -->
     <div class="container-fluid">
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
             <a class="navbar-brand mb-0 h1" href="./mainpage.html"><img style="width: 40px; height: 40px;" src="images/Logo.png" class="boader rounded-circle border-dark"></img></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> 
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="./mainpage.html">Mainpage <span class="sr-only">(current)</span></a>
+              <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active rounded shadow">
+                  <a class="nav-link" href="./mainpage.html">Homepage</a>
                 </li>
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown rounded shadow">
                   <a class="nav-link dropdown-toggle" href="./process.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Process<span class="sr-only">(current)</span>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./process.html">Full Process</a>
-                    <a class="dropdown-item" href="./story.html">Quick View</a>                  
+                    <a class="dropdown-item" href="./story.html">Quick View</a>
+                    <a class="dropdown-item" href="./detail.html">detail</a>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./background.html">Background</a>
-                </li>
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown rounded shadow">
                   <a class="nav-link dropdown-toggle" href="./impactfinal.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Impact<span class="sr-only">(current)</span>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./impactfinal.html">Region</a>
                     <a class="dropdown-item" href="./impactfinal.html">Time</a>
                     <a class="dropdown-item" href="./impactfinal.html">Education</a>
@@ -84,18 +140,22 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item rounded shadow">
+                  <a class="nav-link" href="./resources.html">Resources</a>
+                </li>
+                <li class="nav-item rounded shadow">
                   <a class="nav-link" href="#bottom">Contact us</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                 <img src="http://via.placeholder.com/40" class="boader rounded-circle border-dark pl-2 pr-2" alt="...">
               </form>
             </div>
         </nav>
-
+        
+        <!-- Caresoul -->
         <div class="container-fluid" style="height: 30 vh;" >
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover">
                 <ol class="carousel-indicators">
@@ -104,22 +164,22 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner shadow mb-3 bg-white rounded">
-                <div class="carousel-item active">
-                    <a href="./impactfinal.html"><img src="images/carousel1.jpeg" class="d-block w-100 img-carousel" alt="..."></a>
+                <div class="carousel-item">
+                    <a href="./impactfinal.html"><img src="images/carousel1.jpg" class="d-block w-100 img-carousel" alt="..."></a>
                     <div class="carousel-caption d-none d-md-block text-dark font-weight-bolder">
                       <h3>Impact</h5>
                       <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <a href="./background.html"><img src="images/computer1.png" class="d-block w-100 img-carousel" alt="..."></a>
+                <div class="carousel-item active">
+                    <a href="./resources.html"><img src="images/computer1.png" class="d-block w-100 img-carousel" alt="..."></a>
                     <div class="carousel-caption d-none d-md-block text-dark font-weight-bolder">
-                      <h3>Background</h5>
+                      <h3>Resource</h5>
                       <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <a href="./process.html"><img src="images/process2.png" class="d-block w-100 img-carousel" alt="..."></a>
+                    <a href="./process.html"><img src="images/process2.jpg" class="d-block w-100 img-carousel" alt="..."></a>
                     <div class="carousel-caption d-none d-md-block font-weight-bolder">
                       <h3>Process</h5>
                       <p>Some representative placeholder content for the first slide.</p>
@@ -137,43 +197,50 @@
             </div>
         </div>
 
-        <!-- 内容 -->
-        <div class="container bg-color-content py-5 shadow mb-3 rounded">
-
-          <!--<hr class="line">-->
-
-          <p class="h1 txtCenter mb-5">Know about The Digital Revolution</p>
-          <div class="container textCenter text-center container1 pb-3 shadow mb-3 rounded">
+        <!-- Content -->
+        <div class="container bg-content shadow mb-3 pb-3 rounded ">
+          <div class="demo-redraw " >
+            <section class="content content--layout p-0">
+              <h2 class="word word--redraw text-white" data-path-char-1="M8.3,12.8c26.1-0.7,52.2-1.4,78.3-2.1C25.1-3.6,41,72.6,49.2,101" data-path-char-2="M45.7,9.2c-79.1,12.8-22.2,111.6,24.8,78.6C106.9,62.2,83.1,3.2,45.7,9.2z" data-path-char-3="M18.6,11.6c64.6-15.2,70.5,47.9,8,38.4c72.2-5.5,65.2,59-8.7,44.8C18.1,67.1,18.3,39.3,18.6,11.6z" data-path-char-4="M76.8,9.9C52.3,10.7,15-2.5,14.2,30.6c-0.9,36.5,28.7,23.7,52,23.3C42,55.7,16,46.7,20.3,78.9c3.5,26.7,39.1,16.4,60.6,17.2" data-path-char-5="M76.8,9.9C52.3,10.7,15-2.5,14.2,30.6c-0.9,36.5,28.7,23.7,52,23.3C42,55.7,16,46.7,20.3,78.9c3.5,26.7,39.1,16.4,60.6,17.2">Third</h2><br>
+              <h2 class="word word--redraw text-white" data-path-char-1="M8.3,12.8c26.1-0.7,52.2-1.4,78.3-2.1C25.1-3.6,41,72.6,49.2,101" data-path-char-2="M45.7,9.2c-79.1,12.8-22.2,111.6,24.8,78.6C106.9,62.2,83.1,3.2,45.7,9.2z" data-path-char-3="M18.6,11.6c64.6-15.2,70.5,47.9,8,38.4c72.2-5.5,65.2,59-8.7,44.8C18.1,67.1,18.3,39.3,18.6,11.6z" data-path-char-4="M76.8,9.9C52.3,10.7,15-2.5,14.2,30.6c-0.9,36.5,28.7,23.7,52,23.3C42,55.7,16,46.7,20.3,78.9c3.5,26.7,39.1,16.4,60.6,17.2">Technology</h2><br>
+              <h2 class="word word--redraw text-white" data-path-char-1="M8.3,12.8c26.1-0.7,52.2-1.4,78.3-2.1C25.1-3.6,41,72.6,49.2,101" data-path-char-2="M45.7,9.2c-79.1,12.8-22.2,111.6,24.8,78.6C106.9,62.2,83.1,3.2,45.7,9.2z" data-path-char-3="M18.6,11.6c64.6-15.2,70.5,47.9,8,38.4c72.2-5.5,65.2,59-8.7,44.8C18.1,67.1,18.3,39.3,18.6,11.6z" data-path-char-4="M76.8,9.9C52.3,10.7,15-2.5,14.2,30.6c-0.9,36.5,28.7,23.7,52,23.3C42,55.7,16,46.7,20.3,78.9c3.5,26.7,39.1,16.4,60.6,17.2">Revolution</h2>
+            </section>
+          </div>
+          <div class="container container1 pb-3 shadow mb-3 rounded">
               <div class="row mb-5">
               <div class="col">
-                  <div class="card mb-3 mt-3 shadow mb-5 bg-white rounded" style="max-width: 540px;">
+                  <div class="card-horizontal mb-3 mt-3 shadow mb-5 bg-white rounded" style="max-width: 540px;">
                       <div class="row no-gutters">
-                        <div class="col-md-4">
+                        <div class="col-md-4 card_thumb_horizontal">
                           <img src="images/computer3.jpg" class="img-fluid" style="width: 100%;" alt="...">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title font-weight-bolder">Events</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title font-weight-bolder">Quick View</h5>
+                            <p class="card-subtitle">quick view</p>
+                            <p class="card-text">Here you can get a quick overview of the process, achievements and impacts of the third technological revolution. </p>
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <br>
+                            <a href="./story.html" class="btn bg-gradient mt-3 text-white">Go Quickview</a>
                           </div>
                         </div>
                       </div>
                   </div>
               </div>
               <div class="col">
-                  <div class="card mb-3 mt-3 shadow mb-5 bg-white rounded" style="max-width: 540px;">
+                  <div class="card-horizontal mb-3 mt-3 shadow mb-5 bg-white rounded" style="max-width: 540px;">
                       <div class="row no-gutters">
-                        <div class="col-md-4">
-                          <img src="images/fengnouyiman.jpeg" class="img-fluid" style="width: 100%;" alt="...">
+                        <div class="col-md-4 card_thumb_horizontal">
+                          <img src="images/fullprocess.jpg" class="img-fluid" style="width: 100%;" alt="...">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title font-weight-bolder">People</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title font-weight-bolder">Full Process</h5>
+                            <p class="card-subtitle">Full Process</p>
+                            <p class="card-text">Here you can learn about the whole process of the third technological revolution, relevant fields and representative figures. </p>
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <br>
+                            <a href="./process.html" class="btn bg-gradient mt-3 text-white">Go full process</a>
                           </div>
                         </div>
                       </div>
@@ -181,85 +248,63 @@
               </div>
               </div>
               <div class="row">
-              <div class="col txtCenter">
-                  <div class="card mb-1 shadow mb-5 bg-white rounded" style="width: 20rem;">
-                      <img src="images/computer2.jpeg" class="card-img-top img-fluid" alt="...">
+              <div class="col">
+                  <div class="card mb-1 shadow mb-3 bg-white rounded" style="width: 20rem;">
+                      <div class="card_thumb">
+                        <img src="images/impact.png" class="card-img-top img-fluid" alt="...">
+                      </div>
                       <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">Products</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title font-weight-bolder">Impact</h5>
+                      <div class="card-subtitle">Impact!</div>
+                      <a href="./impactfinal.html" class="btn bg-gradient text-white">Go Impact</a>
+                      <p class="card-text">The third technological revolution has not only greatly promoted changes in the economic, political and cultural fields of human society, but also influenced the way of life and thinking of human beings.</p>
+                      <footer class="card-footer">
+                        <span class="icon ion-clock"></span> 20分钟前
+                        <span class="icon ion-chatbox"></span><a href="#"> 45 评论</a>
+                      </footer>
                       </div>
                   </div>
               </div>
-              <div class="col txtCenter">
-                  <div class="card mb-1 shadow mb-5 bg-white rounded" style="width: 20rem;">
-                      <img src="images/carousel2.jpeg" class="card-img-top img-fluid" alt="...">
+              <div class="col">
+                  <div class="card mb-1 shadow mb-3 bg-white rounded" style="width: 20rem;">
+                      <div class="card_thumb">
+                        <img src="images/resources.png" class="card-img-top img-fluid" alt="...">
+                      </div>
                       <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">Industry</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title font-weight-bolder">Resources</h5>
+                      <div class="card-subtitle">Resources!</div>
+                      <p class="card-text">We have prepared a wealth of resources related to the third technological revolution. This includes books and audio and video materials. From here you can get a broader picture of what this revolution is all about.</p>
+                      <a href="./resources.html" class="btn bg-gradient text-white">Go Resources</a>
+                      <footer class="card-footer">
+                        <span class="icon ion-clock"></span> 10分钟前
+                        <span class="icon ion-chatbox"></span><a href="#"> 145 评论</a>
+                      </footer>
                       </div>
                   </div>
               </div>
-              <div class="col txtCenter">
-                  <div class="card mb-1 shadow mb-5 bg-white rounded" style="width: 20rem;">
-                      <img src="images/revolution1.jpeg" class="card-img-top img-fluid" alt="...">
+              <div class="col">
+                  <div class="card mb-1 shadow mb-3 bg-white rounded" style="width: 20rem;">
+                      <div class="card_thumb">
+                        <img src="images/contact.png" class="card-img-top img-fluid" alt="...">
+                      </div>
                       <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">Future</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title font-weight-bolder">Contact Us</h5>
+                      <div class="card-subtitle">Contact Us!</div>
+                      <p class="card-text">You can contact us through these channels to give us suggestions and guidance on our website. If you are satisfied with our website, you are welcome to sponsor us or join us, and we look forward to your response. </p>
+                      <a href="#bottom" class="btn bg-gradient text-white">Go contact us</a>
+                      <footer class="card-footer">
+                        <span class="icon ion-clock"></span> 15分钟前
+                        <span class="icon ion-chatbox"></span><a href="#"> 245 评论</a>
+                      </footer>
                       </div>
                   </div>
               </div>
               </div>
           </div>
-
-          <hr class="line">
-
-          <p class="h1 txtCenter mb-5">Impacts</p>
-          <div class="container container1 p-3 shadow mb-3 rounded">
-              <div class="row">
-                  <div class="col-md-3">
-                      <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-              </div>
-          </div>
-
-          <hr class="line">
-
-          <div class="container container1 p-3 shadow mb-3 rounded">
-              <div class="row">
-                  <div class="col-md-9">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="col-md-3">
-                      <img src="http://placekitten.com/300/151" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
-                  </div>
-              </div>
-          </div>
-
-          <hr class="line">
-
-          <p class="h1 txtCenter mb-5">Learn More</p>
-          <div class="container container1 p-2 mb-5 shadow rounded" style="height: 82vh;">
-            <div class="border border-secondary shadow p-3 mb-5 bg-white rounded" style="height: 80vh;" >
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qFuBKTz6LP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="container container1 p-2 mb-5 shadow rounded" style="height: 82vh;">
-            <div class="border border-secondary shadow p-3 mb-5 bg-white rounded" style="height: 80vh;" >
-              <iframe width="100%" height="100%" src="https://player.bilibili.com/player.html?aid=370222585&bvid=BV1sZ4y1x7PE&cid=176771150&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-            </div>
-          </div>
-        
-          <!--内容-->
       </div>
 
 
-        <div class="container-fluid bg-secondary pt-4" >
+        <div class="container-fluid pt-4 bg-footer" >
           <div class="row pb-3">
             <div class="col">
               <ul>
@@ -285,13 +330,13 @@
                 </div>
               </ul>
             </div>
-            <div class="col-2 txtCenter pt-3">
+            <div class="col-2 txtCenter pt-3 footer">
               <a href="./mainpage.html#top" aria-label="Home"><img src="images/Logo.png" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
             </div>
-            <div class="col-2 txtCenter pt-3">
+            <div class="col-2 txtCenter pt-3 footer">
               <a href="https://www.bupt.edu.cn/?t=1488061253893" aria-label="BUPT"><img src="images/BUPT.jpeg" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
             </div>
-            <div class="col-2 txtCenter pt-3">
+            <div class="col-2 txtCenter pt-3 footer">
               <a href="https://qmul.ac.uk" aria-label="QMUL"><img src="images/QMUL.jpeg" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
             </div>
           </div>
@@ -303,7 +348,10 @@
         </div>
     </div>
 
-
+    <script src="js/charming.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/demo3.js"></script>
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">!function(){function n(n,e,t){return n.getAttribute(e)||t}function e(n){return document.getElementsByTagName(n)}function t(){var t=e("script"),o=t.length,i=t[o-1];return{l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)}}function o(){a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function i(){r.clearRect(0,0,a,c);var n,e,t,o,m,l;s.forEach(function(i,x){for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))}),x(i)}var a,c,u,m=document.createElement("canvas"),d=t(),l="c_n"+d.l,r=m.getContext("2d"),x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/45)},w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,window.οnmοusemοve=function(n){n=n||window.event,y.x=n.clientX,y.y=n.clientY},window.οnmοuseοut=function(){y.x=null,y.y=null};for(var s=[],f=0;d.n>f;f++){var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})}u=s.concat([y]),setTimeout(function(){i()},100)}();</script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

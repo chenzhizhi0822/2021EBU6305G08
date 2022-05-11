@@ -5,12 +5,62 @@
     <link  rel="stylesheet" href="./css/custom.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="css/mask.css">
     <title>Third Technology Revolution</title>
     <meta charset="utf-8">
 	
 
     <style>
-
+		h5:hover {
+			text-decoration: underline;
+		}
+		.text:hover p {
+			text-decoration: underline;
+			transition: 0.5s;
+		}
+		.footer:hover img {
+          transform: scale(1.2);
+          transition: 0.5s;
+        }
+        /*导航悬浮效果*/
+        nav div li:hover {
+			background-color: rgb(193, 193, 193);
+          
+        }
+        dropdown-menu {
+            display: none;
+            position: absolute;  
+            background-color: #f9f9f9;  
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }  
+        .dropdown-menu a:hover {  
+        background-color: #f1f1f1  
+        }  
+        .dropdown:hover .dropdown-menu {  
+            display: block;  
+        } 
+		.xm{
+			position:fixed;
+			bottom:0;
+			right:0;
+			z-index:1;
+			font-size:0;
+			transition:all .3s ease-in-out;          
+			transform:translateY(0px);          
+		}
+		.xm:hover{
+			-webkit-transform:translateY(-5);
+			-ms-transform:translateY(-5);
+		}
+		.xm img{
+			width:50px;
+		}
+		.card-body {
+			padding-left: 0;
+			padding-right: 0;
+		}
 @media screen and (max-width: 320px) {
 #map_base svg {
 	height: 100px;
@@ -70,67 +120,80 @@
 	height: 580px;
 }
 }
-        .carousel slide {
-            width: 100%;
-        }
+
         .line {
             width: 90%;
             margin-top: 50px;
             margin-bottom: 50px;
             border: 0;
             height: 2px;
-            background-image: linear-gradient(to right, rgb(0, 131, 254), rgb(255, 255, 255), rgb(0, 131, 254));
+            background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255), rgb(0, 0, 0));
         }
         .card-img-top {
             width: 350px;
             height: 200px;
         }
         .txtCenter{text-align:center;}
-        .container1 {
+        .bg-white {
             background-color: rgba(0, 110, 254, 0.096);
         }
         .to_right {
-    width: 0;
-    height: 0;
-    border-left: 10px solid #cccf;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
+			width: 0;
+			height: 0;
+			border-left: 10px solid #cccf;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+		}
+		.bg-map {
+			background-image: linear-gradient(to bottom, rgb(1, 12, 40),80%, rgb(255, 255, 255));
+		}
+		.bg-content {
+              background-image: linear-gradient(to bottom, rgb(71, 71, 73),80%, rgb(129, 126, 126));
+		}
+		.bg-gradient {
+			background-image: linear-gradient(to right, rgb(85, 85, 87),80%, rgb(150, 147, 147));
+		}
+		.bg-footer {
+			background-image: linear-gradient(to top, rgb(85, 85, 87),80%, rgb(150, 147, 147));
+		}
+		.hcqStyle2{display:inline-block;font-weight:bold;color:#def;text-shadow:0 0 1px currentColor,-1px -1px 1px #000,0 -1px 1px #000,1px -1px 1px #000,1px 0 1px #000,1px 1px 1px #000,0 1px 1px #000,-1px 1px 1px #000,-1px 0 1px #000;-webkit-filter:url(#diff1);filter:url(#diff1);/*background:#def;padding:0 .2em*/}
 
     </style>
 	    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+    <div class="xm rounded-circle" id="xm">
+		<a href="#top"><img src="images/BUPT.jpeg" class="boader rounded-circle border-dark"/></a>
+	</div>
+
     <div class="container-fluid p-0">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-			<a class="navbar-brand mb-0 h1" href="./mainpage.html"><img style="width: 40px; height: 40px;" src="images/Logo.png" class="boader rounded-circle border-dark"></img></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+            <a class="navbar-brand mb-0 h1" href="./mainpage.html"><img style="width: 40px; height: 40px;" src="images/Logo.png" class="boader rounded-circle border-dark"></img></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="./mainpage.html">Mainpage <span class="sr-only">(current)</span></a>
+              <ul class="navbar-nav mr-auto ">
+                <li class="nav-item rounded shadow">
+                  <a class="nav-link" href="./mainpage.html">Homepage</a>
                 </li>
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown rounded shadow">
                   <a class="nav-link dropdown-toggle" href="./process.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Process<span class="sr-only">(current)</span>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./process.html">Full Process</a>
-                    <a class="dropdown-item" href="./story.html">Quick View</a>                  
+                    <a class="dropdown-item" href="./story.html">Quick View</a>
+                    <a class="dropdown-item" href="./detail.html">detail</a>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./background.html">Background</a>
-                </li>
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown active rounded shadow">
                   <a class="nav-link dropdown-toggle" href="./impactfinal.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Impact<span class="sr-only">(current)</span>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./impactfinal.html">Region</a>
                     <a class="dropdown-item" href="./impactfinal.html">Time</a>
                     <a class="dropdown-item" href="./impactfinal.html">Education</a>
@@ -139,95 +202,25 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item rounded shadow">
+                  <a class="nav-link" href="./resources.html">Resources</a>
+                </li>
+                <li class="nav-item rounded shadow">
                   <a class="nav-link" href="#bottom">Contact us</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                 <img src="http://via.placeholder.com/40" class="boader rounded-circle border-dark pl-2 pr-2" alt="...">
               </form>
             </div>
-        </nav><!--导航-->
-	</div>
-	<div class="container-fluid" >	
-	<p class="h1 txtCenter mb-5">The Third Industrial Revolution has impact from these aspects:
-	</p>
-	<div class="container textCenter text-center container1 pb-2">
-		<div class="row">
-		<div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
-				<div class="row no-gutters">
-				  <div class="col-md-12">
-					<img src="./images/region.jpg" class="img-fluid" style="width: 100%;" alt="...">
-				  </div>
-				  <hr class="line">
-				  <div class="col-md-12">
-					<div class="card-body">
-					  <h5 class="card-title">Region</h5>
-					  <a href="#region" class="btn btn-primary">Go region</a>
-					</div>
-				  </div>
-				</div>
-			</div>
-		</div>
-		<div class="col">
-		  <div class="card mb-3 mt-3" style="max-width: 540px;">
-			<div class="row no-gutters">
-			  <div class="col-md-12">
-				<img src="./images/education.jpg" class="img-fluid" style="width: 100%;" alt="...">
-			  </div>
-			  <hr class="line">
-			  <div class="col-md-12">
-				<div class="card-body">
-				  <h5 class="card-title">Education</h5>
-				  <a href="#education" class="btn btn-primary">Go education</a>
-				</div>
-			  </div>
-			</div>
-		</div>
-		</div>
-		</div>
-		<div class="row">
-		  <div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
-			  <div class="row no-gutters">
-				<div class="col-md-12">
-				  <img src="./images/time.jpg" class="img-fluid" style="width: 100%;" alt="...">
-				</div>
-				<hr class="line">
-				<div class="col-md-12">
-				  <div class="card-body">
-					<h5 class="card-title">Time</h5>
-					<a href="#time" class="btn btn-primary">Go time</a>
-				  </div>
-				</div>
-			  </div>
-		  </div>
-		  </div>
-		  <div class="col">
-			<div class="card mb-3 mt-3" style="max-width: 540px;">
-			  <div class="row no-gutters">
-				<div class="col-md-12">
-				  <img src="./images/industry.jpg" class="img-fluid" style="width: 100%;" alt="...">
-				</div>
-				<hr class="line">
-				<div class="col-md-12">
-				  <div class="card-body">
-					<h5 class="card-title">Industry</h5>
-					<a href="#industry" class="btn btn-primary">Go industry</a>
-				  </div>
-				</div>
-			  </div>
-		  </div>
-		  </div>
-		  </div>
-	</div></div>
-		
-        <hr class="line">
+        </nav>
+
+	<div class="container-fluid bg-map m-auto py-5">
+
 		<a name="region"></a>
-        <p class="h1 txtCenter mb-5" >Region</p>
+        <p class="h1 txtCenter text-white" >Region</p>
         <div class="map-preview">
           <div class="container">
             <div class="prev">
@@ -525,7 +518,7 @@
 		'hover': 'CHILE','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_33':{
-		'hover': 'CHINA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'CHINA<br><span style="color: yellow;">5G CRH Nuclear-weapon</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_34':{
 		'hover': 'COLOMBIA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -594,7 +587,7 @@
 		'hover': 'FINLAND','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_56':{
-		'hover': 'FRANCE','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'FRANCE<br><span style="color: yellow;">Nuclear-weapon</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_57':{
 		'hover': 'FRENCH GUIANA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -606,7 +599,7 @@
 		'hover': 'GEORGIA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_60':{
-		'hover': 'GERMANY','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'GERMANY<br><span style="color: yellow;">Computer technology Bioengineering</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_61':{
 		'hover': 'GHANA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -666,7 +659,7 @@
 		'hover': 'JAMAICA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_80':{
-		'hover': 'JAPAN666小八嘎','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'JAPAN<br><span style="color: yellow;">the Shinkansen Biotechnology</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_81':{
 		'hover': 'JORDAN','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -828,7 +821,7 @@
 		'hover': 'ROMANIA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_134':{
-		'hover': 'RUSSIA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'RUSSIA<br><span style="color: yellow;">Nuclear technology and space technology</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_135':{
 		'hover': 'RWANDA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -900,7 +893,7 @@
 		'hover': 'SÃO TOMÉ AND PRÍNCIPE','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_158':{
-		'hover': 'TAIWAN','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'CHINA','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_159':{
 		'hover': 'TAJIKISTAN','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -939,10 +932,10 @@
 		'hover': 'UNITED ARAB EMIRATES','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_171':{
-		'hover': 'UNITED KINGDOM','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'UNITED KINGDOM<br><span style="color: yellow;">Electronic tube transistor and integrated circuit television</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_172':{
-		'hover': 'UNITED STATES<br><span style="color: yellow;">*Link each country to any webpage*</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
+		'hover': 'UNITED STATES<br><span style="color: yellow;">Nuclear technology space technology electronic computer atomic energy technology radio broadcasting Internet</span>','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
 	},
 	'map_173':{
 		'hover': 'URUGUAY','upColor':'#eff9ff','overColor':'#ffcc5f','downColor':'#477cb2','enable':true,
@@ -976,190 +969,147 @@
 var pin_config = {
 	'default':{		'pinShadow':'#000',		'pinShadowOpacity':'50',	},
 	'points':[
-
-	{
-		'shape':'circle',
-		'hover': 'hangzhou, China',
-		'pos_X':820,
-		'pos_Y':185,
-		'diameter':12,
-		'outline':'#FFCECE',
-		'thickness':1,
-		'upColor':'#FF0000',
-		'overColor':'#FFEE88',
-		'downColor':'#D15B2C',
-		'enable':true,
-	},
-	{
-		'shape':'circle',
-		'hover': 'Canada',
-		'pos_X':150,
-		'pos_Y':85,
-		'diameter':12,
-		'outline':'#FFCECE',
-		'thickness':1,
-		'upColor':'#FF0000',
-		'overColor':'#FFEE88',
-		'downColor':'#D15B2C',
-		'enable':true,
-	}
-	,
-	{
-		'shape':'circle',
-		'hover': 'America',
-		'pos_X':140,
-		'pos_Y':145,
-		'diameter':12,
-		'outline':'#FFCECE',
-		'thickness':1,
-		'upColor':'#FF0000',
-		'overColor':'#FFEE88',
-		'downColor':'#D15B2C',
-		'enable':true,
-	},
-	{
-		'shape':'circle',
-		'hover': 'Mexico',
-		'pos_X':130,
-		'pos_Y':205,
-		'diameter':12,
-		'outline':'#FFCECE',
-		'thickness':1,
-		'upColor':'#FF0000',
-		'overColor':'#FFEE88',
-		'downColor':'#D15B2C',
-		'enable':true,
-	}
-
+		
 	]
+
 }
 
-	</script>
-<div style="text-align:center;clear:both">
-  <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-  <script src="/follow.js" type="text/javascript"></script>
-  </div>
+		</script>
+
+		<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+		<script src="/follow.js" type="text/javascript"></script>
 
 
+	</div>
+
+	<div class="container bg-content shadow mb-3 pb-3 rounded">
         
         <hr class="line">
 		<a name="time"></a>
-        <p class="h1 txtCenter mb-5">Time</p>
-        <div class="container container1 p-3">
+        <p class="h1 txtCenter mb-5 text-white">Impact</p>
+        <div class="container bg-white p-3 rounded shadow">
           <div class="card-body">
-            <h5 class="card-title">before</h5>
+            <h5 class="card-title ">Economic Development</h5>
           </div>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+                <div class="col-md-3 view">
+                    <img src="images/second.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 150px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
-                <div class="col-md-8">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-md-9 text">
+                    <p class="card-text">Impact on economic development: the impact of the third scientific and technological revolution on economic development is shown in the following aspects; First, it has caused changes in various factors of productivity and significantly improved labor productivity; The third scientific and technological revolution not only strengthened the trend of non-material industrial structure and intelligent production process, but also caused changes in the economic layout of various countries and the world economic structure; In addition, the third scientific and technological revolution developed management into a real science with its rich content and realized modernization.</p>
                 </div>
             </div>
         </div>
-        <hr class="linear-gradient">
-        <div class="container container1 p-3">
+        <hr class="line bg-gradient">
+        <div class="container bg-white p-3 rounded shadow">
           <div class="card-body">
-            <h5 class="card-title">now</h5>
+            <h5 class="card-title">Social Life</h5>
           </div>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+                <div class="col-md-9 text">
+                    <p class="card-text ">Impact on social life and people's Modernization: the third scientific and technological revolution not only brought about the modernization of things and caused changes in the way of labor and life, but also created a new generation to adapt to it and gradually modernize people's ideas, ways of thinking, ways of behavior and ways of life.</p>
                 </div>
-                <div class="col-md-8">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<div class="col-md-3 view">
+                    <img src="images/elcom_7.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 150px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
             </div>
         </div>
-        <hr class="linear-gradient">
-        <div class="container container1 p-3">
+        <hr class="line bg-gradient">
+        <div class="container bg-white p-3 rounded shadow">
           <div class="card-body">
-            <h5 class="card-title">after</h5>
+            <h5 class="card-title">Human Society</h5>
           </div>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+                <div class="col-md-3 view">
+                    <img src="images/biology.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 260px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
-                <div class="col-md-8">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-md-9 text">
+                    <p class="card-text">Impact on human society: the invention and wide use of electronic computers and the formation of various "man-machine control systems" in the third scientific and technological revolution made it possible to realize the automation of production, office and family life (the so-called "three a" revolution). It indicates that human society will enter another higher automation era from the era of mechanization and electrification; The development of space technology and marine technology indicates that human society has entered a far-reaching three-dimensional new era of land, sea and air from the era of "earth residents" bound to the earth's surface; The progress of gene recombination technology, structural chemistry and molecular engineering has enabled mankind to obtain the creativity of actively creating new organisms and new life, marking that mankind is moving step by step from the "Kingdom of necessity" to the "Kingdom of freedom".</p>
                 </div>
             </div>
         </div>
-        <hr class="line"><!--time-->
-		<a name="education"></a>
-        <p class="h1 txtCenter mb-5">Education</p>
-        <div class="container container1 p-3">
-            <div class="row">
-                  <div class="col-md-5">
-                    <img src="./images/edu2.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
-                </div><div class="to_right"></div>
-                <div class="col-md-5">
-                  <img src="./images/edu3.jpg" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
-              </div>
-            </div><hr class="linear-gradient">
-            <div class="col-md-8">
-              <p class="card-text">Some major related to The Third Industrial Revolution:            </p>
-          </div>
-		  <a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E4%B8%93%E4%B8%9A/9420327">
-          <button class="btn btn-default" type="submit"style="border:1px solid pink ; background-color:white" >Computer</button>
-		</a>
-          <button class="btn btn-default" type="submit"style="border:1px solid pink ; background-color:white" >AI</button>
-          <button class="btn btn-default" type="submit"style="border:1px solid pink ; background-color:white" >Data</button>
-          <button class="btn btn-default" type="submit"style="border:1px solid pink ; background-color:white" >Communication</button>
-        </div>
-        <hr class="line"><!--education-->
-		<a name="industry"></a>
-        <p class="h1 txtCenter mb-5">Industry</p>
-        <div class="container container1 p-3">
+        <hr class="line bg-gradient">
+        <div class="container bg-white p-3 rounded shadow">
           <div class="card-body">
-            <h5 class="card-title">行业1</h5>
+            <h5 class="card-title">Capitalism</h5>
           </div>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+				<div class="col-md-9 text">
+                    <p class="card-text">Impact on Capitalism: the third scientific and technological revolution promoted the transition of capitalism from general monopoly to state monopoly. Because the third scientific and technological revolution has greatly promoted the development of social productive forces and continuously improved the degree of socialization of production, the original private monopoly can not meet the needs of the rapid development of productive forces. Therefore, it is urgent for the full development of state monopoly and the comprehensive intervention of the state in the economy.</p>
                 </div>
-                <div class="col-md-8">
-                    <p class="card-text">写出影响</p>
-                </div>
-            </div>
-			<a href="https://www.baidu.com/">
-            <button class="btn btn-default" type="submit"style="border:1px solid pink ; background-color:white" >Example：腾讯按钮可以跳转到公司网页</button>
-		</a>
-        </div>
-        <hr class="linear-gradient">
-        <div class="container container1 p-3">
-          <div class="card-body">
-            <h5 class="card-title">行业2</h5>
-          </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-md-3 view">
+                    <img src="images/atomic.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 260px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
             </div>
         </div>
-        <hr class="linear-gradient">
-        <div class="container container1 p-3">
+        <hr class="line bg-gradient">
+        <div class="container bg-white p-3 rounded shadow">
           <div class="card-body">
-            <h5 class="card-title">行业3</h5>
+            <h5 class="card-title">World Economy</h5>
           </div>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="http://placekitten.com/300/150" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+                <div class="col-md-3 view">
+                    <img src="images/education.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 130px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
-                <div class="col-md-8">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-md-9 text">
+                    <p class="card-text">Impact on the world economy: the third scientific and technological revolution raised the level of world productivity and accelerated the recovery and development of the world economy after the war; It has promoted the development of international trade, the change of world monetary and financial relations and the international flow of production factors; It has promoted the development of multinational corporations and international economic integration, and has caused changes in the world economic structure and economic strategy.</p>
+                </div>
+            </div>
+        </div>
+		<hr class="line bg-gradient">
+        <div class="container bg-white p-3 rounded shadow">
+          <div class="card-body">
+            <h5 class="card-title" style="left:0">International Relations</h5>
+          </div>
+            <div class="row">
+				<div class="col-md-9 text">
+                    <p class="card-text"> Impact on International Relations: the third scientific and technological revolution has had a profound impact on international relations. On the one hand, it intensifies the imbalance in the development of capitalist countries and makes new changes in the international status of capitalist countries; On the other hand, it gives socialist countries a strong driving force in the struggle against western capitalist countries. At the same time, the third scientific and technological revolution widened the gap between the rich and the poor around the world and promoted the changes of social production relations around the world.</p>
+                </div>
+                <div class="col-md-3 view">
+                    <img src="images/nuclear_72.png" class="img-fluid" style="width: 100%; margin: 2px;" alt="...">
+					<div class="mask" style="height: 150px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
                 </div>
             </div>
         </div>
 
-        <hr class="line"><!--industry-->
+		<hr class="line bg-gradient">
 
+		<div class="container bg-white p-3 rounded shadow">
+			<div class="card-body">
+			  <h5 class="card-title">Global Issues</h5>
+			</div>
+			  <div class="row">
+				  <div class="col-md-3 view">
+					  <img src="images/nuclear_23.png" class="img-fluid shadow rounded" style="width: 100%; margin: 2px;" alt="...">
+					  <div class="mask" style="height: 150px;">
+						<p>关注嘉然，顿顿解馋</p>
+					</div>
+				  </div>
+				  <div class="col-md-9 text">
+					  <p class="card-text ">Impact on global issues: on the one hand, the development of scientific and technological revolution has expanded the field of human activities to transform nature and improved human ability to fight against nature, so as to promote the material and spiritual civilization of human society to a new height unimaginable by predecessors; On the other hand, it also brings a series of thorny social problems, such as the deterioration of the ecological environment, the excessive consumption of natural resources and energy and the threat of nuclear disaster. The uncontrollable malignant development of these problems has increasingly troubled the human situation and become a global problem of global concern.</p>
+				  </div>
+			  </div>
+		  </div>
+	</div>
 
-        <div class="container-fluid bg-primary pt-4" >
+        <div class="container-fluid bg-footer pt-4" >
 			<div class="row pb-3">
 			  <div class="col">
 				<ul>
@@ -1185,13 +1135,13 @@ var pin_config = {
 				  </div>
 				</ul>
 			  </div>
-			  <div class="col-2 txtCenter pt-3">
+			  <div class="col-2 txtCenter pt-3 footer">
 				<a href="./mainpage.html#top" aria-label="Home"><img src="images/Logo.png" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
 			  </div>
-			  <div class="col-2 txtCenter pt-3">
+			  <div class="col-2 txtCenter pt-3 footer">
 				<a href="https://www.bupt.edu.cn/?t=1488061253893" aria-label="BUPT"><img src="images/BUPT.jpeg" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
 			  </div>
-			  <div class="col-2 txtCenter pt-3">
+			  <div class="col-2 txtCenter pt-3 footer">
 				<a href="https://qmul.ac.uk" aria-label="QMUL"><img src="images/QMUL.jpeg" style="width: 150px; height: 150px;" class="boader rounded-circle border-dark" alt="..."></a>
 			  </div>
 			</div>
@@ -1200,10 +1150,9 @@ var pin_config = {
 				<p class="h5">©2022 Story about Third Industrial Revolution</p>
 			  </div>
 			</div>
-		  </div><!--最后-->
+		</div><!--最后-->
 
-    </div>
-
+	</div>
 
 	<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">!function(){function n(n,e,t){return n.getAttribute(e)||t}function e(n){return document.getElementsByTagName(n)}function t(){var t=e("script"),o=t.length,i=t[o-1];return{l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)}}function o(){a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function i(){r.clearRect(0,0,a,c);var n,e,t,o,m,l;s.forEach(function(i,x){for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))}),x(i)}var a,c,u,m=document.createElement("canvas"),d=t(),l="c_n"+d.l,r=m.getContext("2d"),x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/45)},w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,window.οnmοusemοve=function(n){n=n||window.event,y.x=n.clientX,y.y=n.clientY},window.οnmοuseοut=function(){y.x=null,y.y=null};for(var s=[],f=0;d.n>f;f++){var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})}u=s.concat([y]),setTimeout(function(){i()},100)}();</script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
