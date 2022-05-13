@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Third Technology Revolution</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+   <!-- <link href="css/mystyle.css" rel="stylesheet"> -->
+   <style type="text/css">
+    body {
+      background-image: linear-gradient(to bottom, rgb(31, 31, 32),50%, rgb(188, 183, 183));
+    }
+    img:hover {
+      transform: scale(1.2);
+      transition: 0.5s;
+    }
+    /*导航悬浮效果*/
+    nav div li:hover {
+      background-color: rgb(193, 193, 193);
+    }
+    .bg-gradient {
+        background-image: linear-gradient(to right, rgb(85, 85, 87),80%, rgb(150, 147, 147));
+        }
+    dropdown-menu {
+        display: none;
+        position: absolute;  
+        background-color: #f9f9f9;  
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }  
+    .dropdown-menu a:hover {  
+    background-color: #f1f1f1  
+    }  
+    .dropdown:hover .dropdown-menu {  
+        display: block;  
+    } 
+    .container-fluid {
+        padding: 0px;
+    }
+    .carousel slide {
+        width: 100%;
+    }
+    .line {
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgb(9, 110, 205), rgb(255, 255, 255), rgb(0, 131, 254));
+    }
+    .card-img-top {
+        width: 350px;
+        height: 200px;
+    }
+    .txtCenter{text-align:center;}
+    .container1 {
+        background-color: rgba(0, 110, 254, 0.096);
+    }
+
+/* 手风琴特效 */
+.header{text-align: center;line-height: 30px;}
+.demo{padding: 2em 0; background: #fff;}
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+#accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0 0 15px 10px;
+}
+#accordion .panel-heading{
+    padding: 0;
+    border-radius: 30px;
+}
+#accordion .panel-title a{
+    display: block;
+    padding: 12px 20px 12px 50px;
+    background: rgb(0, 131, 254);
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed{
+    background: #fff;
+    color: #086dda;
+    border: 1px solid #ddd;
+}
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after{
+    content: "\f107";
+    font-family: fontawesome;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background: rgb(22, 52, 223);
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed:after{
+    content: "\f105";
+    background: #fff;
+    color: #0d6acd;
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+#accordion .panel-body{
+    padding: 20px 25px 10px 9px;
+    background: transparent;
+    font-size: 14px;
+    color: #8c8c8c;
+    line-height: 25px;
+    border-top: none;
+    position: relative;
+}
+#accordion .panel-body p{
+    padding-left: 25px;
+    border-left: 1px dashed #8c8c8c;
+}
+
+/* 图片轮播 */
+*{
+        margin: 0;
+        padding: 0;
+}body{background-color: rgba(0, 110, 254, 0.096)}
+
+    .box{
+        width: 1210px;
+        height: 400px;
+        border: 10px solid rgba(0, 110, 254, 0.096);
+        margin: 50px auto;
+        background-color: rgba(0, 110, 254, 0.096) ;
+        border-right: 0;
+    }
+
+    .box>div{
+        width: 200px;
+        height: 400px;
+  opacity: .3;
+        float: left;
+        background:url("img/t1.png") no-repeat center center;transition:all .7s ease 0s;
+    }
+.box>div:hover{
+
+  opacity: 1;
+       
+    }
+    .box>div h1{
+  color: #fff;
+        font-size: 70px;
+        padding: 40px 40px 0;
+    }
+</style>
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+
+    $(".box>div").mouseover(function(){
+        $(this).stop().animate({
+            "width":"500px"
+        },200).siblings().stop().animate({
+            "width":"140px"
+        },200)
+    })
+
+    $(".box>div").mouseout(function(){
+        $(".box>div").stop().animate({
+            "width":"200px"
+        },200)
+    })
+
+
+</script>
+<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+
+  <div class="container-fluid">
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+            <a class="navbar-brand mb-0 h1" href="./mainpage.html"><img style="width: 40px; height: 40px;" src="images/Logo.png" class="boader rounded-circle border-dark"></img></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto ">
+                <li class="nav-item  rounded shadow">
+                  <a class="nav-link" href="./mainpage.html">Homepage</a>
+                </li>
+                <li class="nav-item active  dropdown rounded shadow">
+                  <a class="nav-link dropdown-toggle" href="./process.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Process<span class="sr-only">(current)</span>
+                  </a>
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./process.html">Full Process</a>
+                    <a class="dropdown-item" href="./story.html">Quick View</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown rounded shadow">
+                  <a class="nav-link dropdown-toggle" href="./impactfinal.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Impact<span class="sr-only">(current)</span>
+                  </a>
+                  <div class="dropdown-menu rounded shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./impactfinal.html">Region</a>
+                    <a class="dropdown-item" href="./impactfinal.html#1">Economic Development</a>
+                    <a class="dropdown-item" href="./impactfinal.html#2">Social Life</a>
+                    <a class="dropdown-item" href="./impactfinal.html#3">Human Society</a>
+                    <a class="dropdown-item" href="./impactfinal.html#4">Capitalism</a>
+                    <a class="dropdown-item" href="./impactfinal.html#5">World Economy</a>
+                    <a class="dropdown-item" href="./impactfinal.html#6">International Relations</a>
+                    <a class="dropdown-item" href="./impactfinal.html#7">Global Issues</a>
+                    
+                  </div>
+                </li>
+                <li class="nav-item rounded shadow">
+                  <a class="nav-link" href="./resources.html">Resources</a>
+                </li>
+                <li class="nav-item rounded shadow">
+                  <a class="nav-link" href="#bottom">Contact us</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                <img src="http://via.placeholder.com/40" class="boader rounded-circle border-dark pl-2 pr-2" alt="...">
+              </form>
+            </div>
+        </nav>
+
+    
+
+   <div class='pages my-5'>
+  <input id='one' name='trigger' type='radio'>
+  <input id='two' name='trigger' type='radio'>
+  <input id='three' name='trigger' type='radio'>
+  <input id='four' name='trigger' type='radio'>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='logo'>Industrial Revolution</div>
+      <div class='pagenumber'>1 2</div>
+      <div class='content'>
+        <div class='content_center'>
+          <h4>The Third Industrial Revolution</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='content'>
+        <div class='content_center right'>
+          <h4>The Third Industrial Revolution</h4>
+        </div>
+        <div class='overlay'></div>
+      </div>
+      <div class='control next'>
+        <label for='two'></label>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='logo'>Industrial Revolution</div>
+      <div class='pagenumber'>2 3</div>
+      <div class='control'>
+        <label for='one'></label>
+      </div>
+      <div class='content'>
+        <div class='content_picture'>
+          <img src='img/shake1.png'>
+        </div>
+        <div class='content_offset'>
+          <h2>Summary</h2>
+          <p>The third technological revolution has not only greatly promoted changes in the economic, political and cultural fields of human society, but also influenced the way of life and thinking of human beings. With the continuous progress of science and technology, all aspects of daily life of human beings, such as clothing, food, housing, transportation and use, are also undergoing significant changes.</p>
+        </div>
+        <h1>
+          <span>N</span>
+          <span>u</span>
+          <span>c</span>
+          <span>l</span>
+          <span>e</span>
+          <span>a</span>       
+          <span>r</span>
+ <span>&nbsp;</span>
+          <span>E</span>
+          <span>n</span>
+          <span>e</span>   
+          <span>r</span>
+          <span>g</span>
+          <span>y</span>
+ <span>&nbsp;</span>
+  <span>&</span>
+  <span>&nbsp;</span>
+          <span>S</span>
+          <span>p</span>
+          <span>a</span>
+          <span>c</span>
+          <span>e</span>
+ <span>&nbsp;</span>
+          <span>T</span>       
+          <span>e</span>
+          <span>c</span>
+          <span>h</span>
+          <span>n</span>   
+          <span>o</span>
+          <span>l</span>
+          <span>o</span>
+          <span>g</span>
+          <span>y</span>
+
+          <br>
+ <span>&nbsp;</span>
+          <span>E</span>
+          <span>l</span>
+          <span>e</span>
+          <span>c</span>
+          <span>t</span>
+          <span>r</span>
+          <span>o</span>
+          <span>n</span>
+          <span>i</span>
+          <span>c</span>
+ <span>&nbsp;</span>
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>p</span>
+          <span>u</span>
+          <span>t</span>
+          <span>e</span>
+          <span>r</span>
+ <span>&nbsp;</span>
+  <span>&</span>
+  <span>&nbsp;</span>
+          <span>B</span>
+          <span>i</span>
+          <span>o</span>
+          <span>e</span>
+          <span>n</span>
+          <span>g</span>
+          <span>i</span>
+          <span>n</span>
+          <span>e</span>
+          <span>e</span>
+          <span>r</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='hamburger'>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+      </div>
+      <div class='control next'>
+        <label for='three'></label>
+      </div>
+      <div class='bg'></div>
+      <div class='footer'>
+<!--         <i class="fab fa-google-plus-g"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-share-square"></i> -->
+      </div>
+      <div class='content'>
+        <div class='content_quote'>
+          <h5>
+            <span class='quo'>
+              <i>"</i>
+            </span>
+            <span>The third technological revolution </span>
+            <span>has profoundly changed our lives</span>
+            <span class='name'></span>
+            <span class='auth'></span>
+            <span class='quo'>"</span>
+          </h5>
+        </div>
+        <div class='content_picture'>
+          <img src='img/shake1.png'>
+        </div>
+        <h1>
+          <span>N</span>
+          <span>u</span>
+          <span>c</span>
+          <span>l</span>
+          <span>e</span>
+          <span>a</span>       
+          <span>r</span>
+ <span>&nbsp;</span>
+          <span>E</span>
+          <span>n</span>
+          <span>e</span>   
+          <span>r</span>
+          <span>g</span>
+          <span>y</span>
+ <span>&nbsp;</span>
+  <span>&</span>
+  <span>&nbsp;</span>
+          <span>S</span>
+          <span>p</span>
+          <span>a</span>
+          <span>c</span>
+          <span>e</span>
+ <span>&nbsp;</span>
+          <span>T</span>       
+          <span>e</span>
+          <span>c</span>
+          <span>h</span>
+          <span>n</span>   
+          <span>o</span>
+          <span>l</span>
+          <span>o</span>
+          <span>g</span>
+          <span>y</span>
+
+          <br>
+ <span>&nbsp;</span>
+          <span>E</span>
+          <span>l</span>
+          <span>e</span>
+          <span>c</span>
+          <span>t</span>
+          <span>r</span>
+          <span>o</span>
+          <span>n</span>
+          <span>i</span>
+          <span>c</span>
+ <span>&nbsp;</span>
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>p</span>
+          <span>u</span>
+          <span>t</span>
+          <span>e</span>
+          <span>r</span>
+ <span>&nbsp;</span>
+  <span>&</span>
+  <span>&nbsp;</span>
+          <span>B</span>
+          <span>i</span>
+          <span>o</span>
+          <span>e</span>
+          <span>n</span>
+          <span>g</span>
+          <span>i</span>
+          <span>n</span>
+          <span>e</span>
+          <span>e</span>
+          <span>r</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='logo'>Industrial Revolution</div>
+      <div class='pagenumber'>4 5</div>
+      <div class='content'>
+        <div class='content_center'>
+          <h4>It was a great industrial revolution</h4>
+          <h6>A great industrial revolution</h6>
+        </div>
+      </div>
+      <div class='control'>
+        <label for='two'></label>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='hamburger'>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+      </div>
+      <div class='control next'>
+        <label for='four'></label>
+      </div>
+      <div class='bg'></div>
+      <div class='content_centerimage'>
+        <img src='img/useit.png'>
+      </div>
+      <div class='content'>
+        <div class='content_center right'>
+          <h4>It was a great industrial revolution</h4>
+          <h6>A great industrial revolution</h6>
+        </div>
+      </div>
+      <div class='footer'>
+<!--         <i class="fab fa-google-plus-g"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-share-square"></i> -->
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='logo'>Industrial Revolution</div>
+      <div class='pagenumber'>6 7</div>
+      <div class='content'>
+        <div class='content_section'>
+          <h2>Characteristics</h2>
+          <p>Science and technology play an increasingly important role in driving the development of productive forces, and the rate of transformation of science and technology into direct productivity has accelerated.</p>
+        </div>
+        <div class='content_section'>
+          <h2>Results</h2>
+          <p>Rapid development of microcomputers. The widespread use of electronic computers has promoted the automation of production, modernization of management, modernization of scientific and technological means.</p>
+        </div>
+        <div class='content_section'>
+          <h2>Impacts</h2>
+          <p>Continuous progress in production technology, continuous improvement in the quality and skills of workers, continuous improvement in the means of labor, and further increase in labor productivity.</p>
+        </div>
+      </div>
+      <div class='control'>
+        <label for='three'></label>
+      </div>
+    </div>
+  </div>
+  <div class='pages_page'>
+    <div class='pages_page__inner'>
+      <div class='hamburger'>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+        <div class='hamburger_part'></div>
+      </div>
+      <div class='bg'></div>
+      <div class='content'></div>
+      <div class='footer'>
+<!--         <i class="fab fa-google-plus-g"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-share-square"></i> -->
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">!function(){function n(n,e,t){return n.getAttribute(e)||t}function e(n){return document.getElementsByTagName(n)}function t(){var t=e("script"),o=t.length,i=t[o-1];return{l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)}}function o(){a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function i(){r.clearRect(0,0,a,c);var n,e,t,o,m,l;s.forEach(function(i,x){for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))}),x(i)}var a,c,u,m=document.createElement("canvas"),d=t(),l="c_n"+d.l,r=m.getContext("2d"),x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/45)},w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,window.οnmοusemοve=function(n){n=n||window.event,y.x=n.clientX,y.y=n.clientY},window.οnmοuseοut=function(){y.x=null,y.y=null};for(var s=[],f=0;d.n>f;f++){var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})}u=s.concat([y]),setTimeout(function(){i()},100)}();</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>

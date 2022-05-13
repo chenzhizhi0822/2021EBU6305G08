@@ -1,0 +1,296 @@
+@charset "utf-8";
+body {
+    background-color: #c0d7ef;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200; 
+font-family: Arial, Helvetica, sans-serif;          
+    }
+.title{
+    position:absolute;
+    top:60px;
+    width:100%;
+    border-bottom: 2px dotted black;
+    font-family: Arial, Helvetica, sans-serif;  
+ 
+}
+
+.logo {
+    width:50px;
+    height:50px;
+    background:url(images/logo.png);
+    background-size: 40px;
+	background-repeat: no-repeat;
+	float: left;
+    margin-top:5px;
+	margin-left: 15px;
+    margin-right:15px;    
+}
+
+.classify{
+    position:absolute;
+    top:0px;
+    height: 50px;
+    width: 100%;
+    background-color:#5a97de;
+    margin:0px;
+    }
+
+    nav ul{
+        position:absolute;
+        font-size: 16px;
+        font-weight: bolder;
+        top:50%; 
+        width: 63%;
+    }
+
+    nav li{
+        position:relative;
+        list-style-type: none;
+        background-color:whitesmoke;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #000000;
+        float: left;
+        left:38%;
+        text-align: center;   
+    }
+
+    nav li a{
+        color: #333366;
+        text-decoration: none;
+        margin: 0px;
+        padding-top: 8px;
+        display: block; /* 作为一个块 */
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 8px;
+    }
+    
+    nav li a{
+        color: #63acfa;
+        text-decoration: none;
+        margin: 0px;
+        padding-top: 8px;
+        display: block; /* 作为一个块 */
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 8px;
+    }
+    
+    nav li :hover a,
+    nav li a:hover{
+            background:#666666;
+            color:white;
+            }
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    padding: 0;
+    font-size: 16px;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:3%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    font-size:20px;
+}
+
+.top li a{
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */    
+}
+.top li:hover a {
+	color: gray;
+}
+
+.login {
+    font-size:20px;
+    float: right;    
+    margin-right: 35px;
+    color:white;    
+}
+            
+            #menu {
+            list-style-image:none;
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            
+            }
+
+            #menu li{
+            color:whitesmoke;
+            background-color: black;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: #000000;
+            float: left;
+        
+            }
+
+            #menu li a{
+            position: relative;
+            color: whitesmoke;
+            text-decoration: none;
+            margin: 10px;
+            padding-top: 8px;
+            display: block; /* 作为一个块 */
+            left: 30%; /* 设置块的属性 */
+            padding-right: 50px;
+            padding-bottom: 8px;
+            padding-left: 50px;
+    
+            }
+
+            #menu li a:hover{
+            background-color: gray;
+            }
+
+            #menu li a:active{
+            background-color:black;
+            }
+
+            button{
+              font-size: 25px;
+              border-bottom: 1px;
+              border-bottom-color: whitesmoke;
+              color:whitesmoke;
+              background-color: #333366;
+             }
+
+            button:focus{
+                outline:none;
+            }
+
+            button:active{
+                box-shadow: 5px #666;
+                transform: translateY(4px);
+            }        
+
+            .menu_list {
+            width: 208px;
+            margin: 0;
+            position: absolute ; 
+            left:73px ;
+            top:270px;
+            background:#3c8fe1;
+            /* border: 1px solid gray; */
+            font-size: 20px;
+	animation: up 2s;
+            }
+            @keyframes up{
+                from{top:260px;}
+                to{top:270px;}
+            }
+            .menu_list a {
+            display: block;
+            height: 50px;
+            line-height: 38px;
+            padding-left: 38px;
+            color: whitesmoke;
+            /* background: #fff; */
+            text-decoration: none;
+            border-bottom: 3px solid whitesmoke;
+border-radius: 3%;
+            }
+
+            .menu_list a:hover{
+            background-color:lightgray;
+            }
+
+            .menu_list a:active{
+             background-color:gray;
+            }
+
+
+            .left{
+            width: 280px;
+            height: 390px;
+            position: absolute ;            
+            top:220px;
+            border-right: 1px solid grey;}
+
+            /**battle & figures style*/
+            .camp{
+                background-color: #333366;
+                width: 80%; 
+                position: absolute;
+                left: 10%;
+                top: 40%;
+                text-align: center;
+                text-align: border;
+            }
+
+            img{
+                width: 200px;
+                height: 200px;
+            }
+
+            /**high style*/
+       .content{
+            position: absolute ; 
+            left:100px;
+            top:100px;
+            width: 100%;
+            height: 600px;
+        }
+
+        
+        .specific_content{
+            border-top:1px solid #CCC;
+            margin-bottom: 40px;
+            color:black;
+
+        }
+
+        .image{
+            vertical-align:middle;
+        }
+
+        .text{
+            position: relative ; 
+            left: 10px;;
+            top: -50px;
+            width: 950px;
+            word-wrap:break-word;
+        }
+
+        /*primary style*/
+         .box{
+            position: absolute;
+            top: 200px;
+            left:150px;
+            width: 1000px;
+            height: 550px;
+            text-align: center;
+            text-decoration: blink;
+      
+            }
+
+            /*test style*/
+           .test{
+                background-color: #333366;
+                width: 80%; 
+                height:180%;
+                position: absolute;
+                left: 10%;
+                top: 40%;
+                text-align: center;
+                text-align: border;
+                color:whitesmoke;
+            }

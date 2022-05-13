@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Image Gallery Threejs JQuery</title>
+    <meta name="Description" content="" />
+    <meta name="Keywords"  content="" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen,print" href="css/image-gallery-three.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen,print" href="css/style.min.css" />
+</head>
+<body>
+
+<div class="box"></div>
+<script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
+<script type="text/javascript" src="js/assets.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/PreloadJS/0.3.1/preloadjs.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
+
+<script type="text/javascript" src="js/image-gallery-three.min.js"></script>
+
+<script type='text/javascript'>//<![CDATA[
+$(function(){
+    var box = $(".box").ig3js({
+        manifest: [
+            {src:"image1.jpg", id:"image1"},
+            {src:"image2.jpg", id:"image2"},
+            {src:"image3.jpg", id:"image3"},
+            {src:"image4.jpg", id:"image4"},
+            {src:"image5.jpg", id:"image5"},
+            {src:"image6.jpg", id:"image6"},
+            {src:"image7.jpg", id:"image7"}
+        ],
+        imagePath: 'images/',
+        alphaBackground: true,
+        onNavigateComplete: function(obj){
+       //     console.log("navigation complete");
+       //     console.log(obj);
+        }
+    });
+
+    $(".next").click(function(){
+        box.navigate.next();
+        return false;
+    });
+
+    $(".prev").click(function(){
+        box.navigate.prev();
+        return false;
+    });
+
+    $(".defP").click(function(){
+        box.perspective.default();
+        return false;
+    });
+
+    $(".trP").click(function(){
+        box.perspective.topRight();
+        return false;
+    });
+
+    $(".tlP").click(function(){
+        box.perspective.topLeft();
+        return false;
+    });
+
+    for(count=1; count<=7; count++){
+        $(".goto").append('<a href="#" class="goto'+count+'" pos="'+(count-1)+'"> '+count+' </a>');
+        $(".goto"+count).click(function(){
+            box.navigate.goTo($(this).attr("pos"));
+            return false;
+        });
+    }
+
+});//]]>
+
+</script>
+<a href="#" class="prev">prev</a><br />
+<div class="goto"></div>
+<a href="#" class="next">next</a><br />
+<a href="#" class="defP">default perspective</a><br />
+<a href="#" class="trP">top right perspective</a><br />
+<a href="#" class="tlP">top left perspective</a><br />
+</body>
+</html>
