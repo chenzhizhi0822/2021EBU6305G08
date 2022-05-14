@@ -1,0 +1,269 @@
+$gold: #D4A12D;
+$purple: #493e56;
+$duration: .7s;
+$easing: cubic-bezier(.25, 0, .1, 1);
+
+img { max-width: 100%; }
+
+#app {
+  width: 90%;
+  height: 85%;
+  overflow: hidden;
+}
+
+.ui-big-images {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.ui-big-image {
+  width: 100%;
+  margin-right: -100%;
+  
+  img {
+    object-fit: cover;
+    object-position: center 20%;
+    @media (max-height: 600px) {
+      object-position: center center;
+    }
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.ui-thumbnails {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1rem;
+  padding-top: .5rem;
+  padding-right: 45%;
+  padding-right: calc( 45% + .5rem );
+}
+
+.ui-thumbnail {
+  display: block;
+  margin-right: .5rem;
+  padding: .5rem 0;
+  cursor: pointer;
+}
+
+.ui-cuticle {
+  background-color: $gold;
+  position: absolute;
+  bottom: 0;
+  height: .25rem;
+  width: 100%;
+}
+
+.ui-thumbnail > img {
+  width: auto;
+}
+
+.ui-content {
+  position: absolute;
+  width: 40%;
+  right: 5%;
+  bottom: 0;
+}
+
+.ui-articles {
+  background: #493e56;
+  color: white;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.ui-article {
+  padding: 1.5rem;
+  width: 100%;
+  margin-right: -100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui-paragraph {
+  margin: 0;
+  font-size: .7rem;
+  line-height: 1.7;
+}
+
+.ui-nav {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  background: inherit;
+  
+  button {
+    background: $purple;
+    border: none;
+    appearance: none;
+    padding: .5em;
+    width: 2em;
+    color: #FFF;
+    font-family: monospace;
+    transition: inherit;
+    
+      transition-duration: 300ms;
+    &:hover,
+    &:focus {
+      background: $gold;
+      outline: none;
+    }
+    
+    &:active {
+      outline: none;
+      transform: translateY(.25em); 
+      transition-duration: 100ms;
+    }
+  }
+}
+
+.ui-heading {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+
+  &:before {
+    content: 'Animator';
+    font-size: .5rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* ---------------------------------- */
+
+
+.ui-big-image { 
+  opacity: 0;
+  transform: translateX(-100%);
+
+  img {
+    transform: scale(0.85);
+  }
+}
+
+.ui-big-image[data-active] ~ .ui-big-image {
+  transform: translateX(100%);
+}
+
+.ui-big-image[data-active] {
+  opacity: 1;
+  transform: translateX(0%);
+  img {
+    transform: scale(1);
+  }
+}
+
+
+/* ---------------------------------- */
+
+.ui-article {
+  transform: translateX(-100%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gold;
+    opacity: 1;
+    transition-duration: $duration / 2;
+    z-index: 1;
+  }
+}
+
+.ui-article[data-active] ~ .ui-article {
+  transform: translateX(100%);
+}
+
+.ui-article[data-active] {
+  transform: translateX(0%);
+
+  &:before {
+    opacity: 0;
+  }
+}
+
+
+/* ---------------------------------- */
+
+
+.ui-thumbnail {
+  > img {
+    filter: grayscale(100%);
+    transition-duration: $duration / 2;
+  }
+
+  &:active {
+    > img {
+      transform: scale(0.9);
+      transition-duration: 100ms;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ui-cuticle {
+  display: none;
+}
+
+.ui-thumbnail {
+  &[data-active], &:hover {
+    > img {
+      filter: grayscale(0%);
+    }
+  }
+
+  &[data-active] .ui-cuticle {
+    display: block; 
+  }
+}
+
+
+/* ---------------------------------- */
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A130C;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+  transition-property: transform, opacity, filter;
+  transition-duration: $duration, $duration, $duration;
+  transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
