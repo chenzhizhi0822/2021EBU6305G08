@@ -37,3 +37,4 @@ Final version
 
 https://user-images.githubusercontent.com/58174623/168330280-c6bd2c2e-5d0b-4dd8-87b6-65bfc4bea3ec.mp4
 
+- In this final version iteration, we held the meeting session many times, talking about the whole contents and the structure. By discussing, we decide to use grey and low brightness color theme including some gradient color styles. We also decide to use div as each part's container and use Bootstrap's Layout way for the whole website, all the content should be placed in one container and be separated with navigation, footer and shallow background. 
